@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 
 import { drizzle } from "drizzle-orm/node-postgres";
 // import { eq } from "drizzle-orm";
-import { usersTable } from "@/../data/drizzle/schema/index";
+import { documentTable, userTable } from "@/../data/drizzle/schema/index";
 
 const db = drizzle(process.env.DATABASE_URL!);
 
@@ -17,12 +17,22 @@ app.get("/hello", (c) => {
 });
 
 app.get("/users", async (c) => {
-  const users = await db.select().from(usersTable);
+  const users = await db.select().from(userTable);
   console.log("Getting all users from the database: ", users);
 
   return c.json({
     message: "Hello from Hono on Vercel!",
     data: users,
+  });
+});
+
+app.get("/docs", async (c) => {
+  const docs = await db.select().from(documentTable);
+  console.log("Getting all docs from the database: ", docs);
+
+  return c.json({
+    message: "Here are the docs",
+    data: docs,
   });
 });
 
