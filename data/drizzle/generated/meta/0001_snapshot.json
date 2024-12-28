@@ -1,6 +1,6 @@
 {
-  "id": "4b70a6ac-e944-433b-a62d-5d17efbbf886",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "fdc2f5e7-356f-4f1a-b999-8ad0b2658320",
+  "prevId": "4b70a6ac-e944-433b-a62d-5d17efbbf886",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -409,15 +409,15 @@
           "primaryKey": true,
           "notNull": true
         },
-        "name": {
-          "name": "name",
+        "first_name": {
+          "name": "first_name",
           "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
-        "age": {
-          "name": "age",
-          "type": "integer",
+        "last_name": {
+          "name": "last_name",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
