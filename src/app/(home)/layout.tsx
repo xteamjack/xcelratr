@@ -20,7 +20,10 @@ const MainLayout = async ({
       className="w-full h-auto min-h-screen
      !bg-[#f8f8f8] dark:!bg-background"
     >
-      <h1>Header</h1>
+      <h1 className="text-5xl font-semibold">xCelratR</h1>
+      <h3 className="text-sm font-thin">
+        A launch pad to accelerate your career
+      </h3>
       <div>{children}</div>
     </div>
   );

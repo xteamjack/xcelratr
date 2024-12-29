@@ -36,15 +36,15 @@ export default function RootLayout({
         className={cn("bg-background", open_sans.variable, urbanist.className)}
       >
         <QueryProvider>
-          <ThemeProvider
+          {/* <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
-          >
-            {children}
-            <Toaster />
-          </ThemeProvider>
+          > */}
+          {children}
+          <Toaster />
+          {/* </ThemeProvider> */}
         </QueryProvider>
       </body>
     </html>
